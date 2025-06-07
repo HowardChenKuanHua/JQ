@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Button</title>
+    <script>
+      function triggerPurchase() {
+        gtag('event', 'purchase', {
+          transaction_id: 'T123',
+          value: 59.99,
+          currency: 'USD',
+          items: [{ item_name: '虛擬貓耳髮箍', quantity: 1, price: 59.99 }]
+        });
+        alert('已觸發 purchase 事件');
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="triggerPurchase()">立即購買</button>
+  </body>
+</html>
